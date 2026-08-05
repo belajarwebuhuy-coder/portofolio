@@ -21,6 +21,9 @@ $stmt = $pdo->prepare("SELECT * FROM blogs WHERE slug = ? AND status = 'publishe
 $stmt->execute([$slug]);
 $blog = $stmt->fetch();
 
+$notFound = false;
+$tags = [];
+
 if (!$blog) {
     http_response_code(404);
     $notFound = true;

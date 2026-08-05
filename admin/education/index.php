@@ -35,7 +35,7 @@ require_once __DIR__ . '/../../includes/header.php';
         <table class="table table-hover table-striped mb-0">
             <thead>
                 <tr>
-                    <th>#</th>
+                    <th>No</th>
                     <th>Institution</th>
                     <th>Degree</th>
                     <th>Period</th>

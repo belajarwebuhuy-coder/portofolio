@@ -34,11 +34,16 @@ if (!defined('BASE_URL')) {
 // -----------------------------------------------------
 // Database Credentials
 // -----------------------------------------------------
-define('DB_HOST', 'localhost');
+define('DB_HOST', '');
 define('DB_NAME', 'portfolio_cms');
 define('DB_USER', 'root');
 define('DB_PASS', '');
 define('DB_CHARSET', 'utf8mb4');
+// define('DB_HOST', 'sql312.infinityfree.com');
+// define('DB_NAME', 'if0_42579626_portofolio');
+// define('DB_USER', 'if0_42579626');
+// define('DB_PASS', 'Bx6oNf7wc3kKlV');
+// define('DB_CHARSET', 'utf8mb4');
 
 // -----------------------------------------------------
 // App Constants

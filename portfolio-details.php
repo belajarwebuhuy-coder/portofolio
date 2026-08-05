@@ -21,6 +21,10 @@ $stmt = $pdo->prepare("SELECT * FROM projects WHERE slug = ? AND status = 'publi
 $stmt->execute([$slug]);
 $project = $stmt->fetch();
 
+$notFound = false;
+$gallery = [];
+$techStack = [];
+
 if (!$project) {
     http_response_code(404);
     $notFound = true;
