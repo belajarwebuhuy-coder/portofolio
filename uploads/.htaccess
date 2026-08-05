@@ -1,0 +1,19 @@
+# ====================================================
+
+# Personal Portfolio CMS
+
+# Uploads Security
+
+# Author : Wahyu Subuh
+
+# ====================================================
+
+# Block direct access to PHP scripts inside uploads
+
+<FilesMatch "\.(php|phtml|php3|php4|php5|php7|phps)$">
+Require all denied
+</FilesMatch>
+
+# Prevent directory listing
+
+Options -Indexes

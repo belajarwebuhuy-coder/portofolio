@@ -1,0 +1,22 @@
+# ====================================================
+# Personal Portfolio CMS
+# Apache Configuration
+# Author : Wahyu Subuh
+# ====================================================
+
+Options -Indexes
+
+# Block access to sensitive directories
+RedirectMatch 403 ^includes/.*$
+RedirectMatch 403 ^database/.*$
+RedirectMatch 403 ^docs/.*$
+
+# Protect .htaccess itself
+<Files .htaccess>
+    Require all denied
+</Files>
+
+# Prevent directory listing
+<IfModule mod_autoindex.c>
+    IndexIgnore *
+</IfModule>
