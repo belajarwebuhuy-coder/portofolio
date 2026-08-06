@@ -31,7 +31,7 @@ $siteName = $settings['website_name'] ?? 'My Portfolio';
                 <li><a href="<?= url('index.php') ?>#hero"
                         class="<?= ($currentPage ?? 'home') === 'home' ? 'active' : '' ?>">Home</a></li>
                 <li><a href="<?= url('index.php') ?>#about">About</a></li>
-                <li><a href="<?= url('skills.php') ?>"
+                <li><a href="<?= url('index.php') ?>#skills"
                         class="<?= ($currentPage ?? '') === 'skills' ? 'active' : '' ?>">Skills</a></li>
                 <li><a href="<?= url('index.php') ?>#resume">Resume</a></li>
                 <li><a href="<?= url('index.php') ?>#portfolio">Portfolio</a></li>

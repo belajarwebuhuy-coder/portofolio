@@ -194,6 +194,16 @@ $siteDesc = $settings['meta_description'] ?? '';
         <!-- Skills Section -->
         <?php if ($skills): ?>
         <section id="skills" class="skills section">
+            <div class="container section-title" data-aos="fade-up">
+                <h2>Skills</h2>
+                <div class="title-shape">
+                    <svg viewBox="0 0 200 20" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M 0,10 C 40,0 60,20 100,10 C 140,0 160,20 200,10" fill="none" stroke="currentColor"
+                            stroke-width="2"></path>
+                    </svg>
+                </div>
+            </div>
+
             <div class="container" data-aos="fade-up" data-aos-delay="100">
                 <div class="row g-4 skills-animation">
                     <?php foreach ($skills as $skill): ?>
@@ -211,7 +221,8 @@ $siteDesc = $settings['meta_description'] ?? '';
                     <?php endforeach; ?>
                 </div>
                 <div class="text-center mt-4">
-                    <a href="<?= url('skills.php') ?>" class="btn btn-outline">View All Skills</a>
+                    <a href="<?= url('skills.php') ?>" class="btn btn-primary view-all-btn">View All Skills <i
+                            class="bi bi-arrow-right"></i></a>
                 </div>
             </div>
         </section>
