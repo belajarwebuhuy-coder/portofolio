@@ -1,13 +1,4 @@
 <?php
-/**
- * -----------------------------------------------------
- * Personal Portfolio CMS
- * Module : Frontend Navbar
- * Description : Dynamic site navigation
- * Author : Wahyu Subuh
- * -----------------------------------------------------
- */
-
 declare(strict_types=1);
 
 require_once __DIR__ . '/functions.php';
@@ -35,7 +26,7 @@ $siteName = $settings['website_name'] ?? 'My Portfolio';
                         class="<?= ($currentPage ?? '') === 'skills' ? 'active' : '' ?>">Skills</a></li>
                 <li><a href="<?= url('index.php') ?>#resume">Resume</a></li>
                 <li><a href="<?= url('index.php') ?>#portfolio">Portfolio</a></li>
-                <li><a href="<?= url('blog.php') ?>">Blog</a></li>
+                <!-- <li><a href="<?= url('blog.php') ?>">Blog</a></li> -->
                 <li><a href="<?= url('index.php') ?>#contact">Contact</a></li>
             </ul>
             <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>

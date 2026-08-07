@@ -1,13 +1,4 @@
 <?php
-/**
- * -----------------------------------------------------
- * Personal Portfolio CMS
- * Module : Database
- * Description : PDO database connection
- * Author : Wahyu Subuh
- * -----------------------------------------------------
- */
-
 declare(strict_types=1);
 
 require_once __DIR__ . '/config.php';

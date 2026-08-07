@@ -1,13 +1,4 @@
 <?php
-/**
- * -----------------------------------------------------
- * Personal Portfolio CMS
- * Module : Contact Form Handler
- * Description : Process and store contact messages
- * Author : Wahyu Subuh
- * -----------------------------------------------------
- */
-
 declare(strict_types=1);
 
 require_once __DIR__ . '/includes/functions.php';

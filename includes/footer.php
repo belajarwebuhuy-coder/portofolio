@@ -1,13 +1,4 @@
 <?php
-/**
- * -----------------------------------------------------
- * Personal Portfolio CMS
- * Module : Admin Footer
- * Description : Admin layout footer (close HTML + scripts)
- * Author : Wahyu Subuh
- * -----------------------------------------------------
- */
-
 declare(strict_types=1);
 ?>
 </div><!-- /.content -->

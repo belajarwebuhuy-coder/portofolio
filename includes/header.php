@@ -1,13 +1,4 @@
 <?php
-/**
- * -----------------------------------------------------
- * Personal Portfolio CMS
- * Module : Admin Header
- * Description : Admin layout header (open HTML + styles)
- * Author : Wahyu Subuh
- * -----------------------------------------------------
- */
-
 declare(strict_types=1);
 
 require_once __DIR__ . '/auth.php';
