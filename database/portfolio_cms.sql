@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 07 Agu 2026 pada 03.06
+-- Waktu pembuatan: 07 Agu 2026 pada 03.44
 -- Versi server: 10.4.32-MariaDB
 -- Versi PHP: 8.5.9
 
@@ -117,7 +117,7 @@ CREATE TABLE `education` (
 
 INSERT INTO `education` (`id`, `institution`, `degree`, `start_year`, `end_year`, `description`, `sort_order`, `created_at`, `updated_at`) VALUES
 (1, 'SMA N 43 Jakarta', 'None', '2018', '2021', 'Selama menempuh pendidikan di tingkat SMA, saya membangun dasar kemampuan berpikir kritis, kerja sama tim, dan pemecahan masalah. Pengalaman belajar ini menjadi fondasi untuk mengembangkan minat saya di bidang teknologi dan pengembangan perangkat lunak.', 1, '2026-08-04 06:44:37', '2026-08-07 01:29:48'),
-(3, 'Universitas Indraprasta PGRI', 'S1', '2021', '2025', 'Menempuh pendidikan di bidang [Nama Jurusan] dengan fokus pada pengembangan perangkat lunak, pemrograman, basis data, analisis sistem, dan teknologi web. Selama perkuliahan, saya mengerjakan berbagai proyek yang membantu meningkatkan kemampuan dalam membangun aplikasi menggunakan PHP, MySQL, JavaScript, dan Bootstrap, serta memahami praktik pengembangan perangkat lunak yang baik.', 2, '2026-08-06 07:18:24', '2026-08-07 01:30:22');
+(3, 'Universitas Indraprasta PGRI', 'S1', '2021', '2025', 'Menempuh pendidikan di bidang Teknik Informatika dengan fokus pada pengembangan perangkat lunak, pemrograman, basis data, analisis sistem, dan teknologi web. Selama perkuliahan, saya mengerjakan berbagai proyek yang membantu meningkatkan kemampuan dalam membangun aplikasi menggunakan PHP, MySQL, dan JavaScript serta memahami praktik pengembangan perangkat lunak yang baik.', 2, '2026-08-06 07:18:24', '2026-08-07 03:20:38');
 
 -- --------------------------------------------------------
 
@@ -170,7 +170,7 @@ CREATE TABLE `hero` (
 --
 
 INSERT INTO `hero` (`id`, `greeting`, `title`, `profession`, `description`, `hero_image`, `button1_text`, `button1_link`, `button2_text`, `button2_link`, `created_at`, `updated_at`) VALUES
-(1, 'Hello, I am', 'Azis Setiawan', 'Full-Stack Developer', 'Saya adalah Web Developer yang berfokus pada pengembangan website modern, cepat, responsif, dan mudah dikelola menggunakan PHP, MySQL, Bootstrap, dan JavaScript.', '20260807-084655-c9206f.jpg', 'Instagram', 'https://instagram.com/stywanjis', 'Youtube', 'https://www.youtube.com/@stywanjis', '2026-08-04 05:57:00', '2026-08-07 01:46:55');
+(1, 'Hello, I am', 'Azis Setiawan', 'Full-Stack Developer', 'Saya adalah Web Developer yang berfokus pada pengembangan website modern, cepat, responsif, dan mudah dikelola menggunakan PHP, MySQL, Bootstrap, dan JavaScript.', '20260807-084655-c9206f.jpg', 'Instagram', 'https://instagram.com/stywanjis', 'Linkedin', 'https://www.linkedin.com/in/muhamad-azis-setiawan-42309930b/', '2026-08-04 05:57:00', '2026-08-07 03:43:33');
 
 -- --------------------------------------------------------
 
