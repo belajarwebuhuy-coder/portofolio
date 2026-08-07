@@ -219,10 +219,6 @@ $flash = getFlash();
                 href="<?= url('admin/projects/index.php') ?>">
                 <i class="bi bi-kanban"></i> Projects
             </a>
-            <a class="nav-link <?= ($activeMenu ?? '') === 'blog' ? 'active' : '' ?>"
-                href="<?= url('admin/blog/index.php') ?>">
-                <i class="bi bi-journal-text"></i> Blog
-            </a>
             <a class="nav-link <?= ($activeMenu ?? '') === 'messages' ? 'active' : '' ?>"
                 href="<?= url('admin/messages/index.php') ?>">
                 <i class="bi bi-envelope"></i> Messages
