@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.2.3
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 05 Agu 2026 pada 03.14
+-- Waktu pembuatan: 07 Agu 2026 pada 03.06
 -- Versi server: 10.4.32-MariaDB
--- Versi PHP: 8.2.12
+-- Versi PHP: 8.5.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `portfolio_cms`
+-- Basis data: `portfolio_cms`
 --
 
 -- --------------------------------------------------------
@@ -45,7 +45,7 @@ CREATE TABLE `about` (
 --
 
 INSERT INTO `about` (`id`, `photo`, `title`, `description`, `birth_date`, `location`, `email`, `phone`, `created_at`, `updated_at`) VALUES
-(1, '20260804-134638-0523ee.jpg', 'UI/UX Designer & Web Developer', 'I am a passionate developer who loves creating elegant and functional web solutions.', '1998-01-01', 'Jakarta, Indonesia', 'hello@example.com', '+62 812 3456 7890', '2026-08-04 05:57:00', '2026-08-04 06:46:38');
+(1, '20260807-084717-f0ef03.jpg', 'UI/UX Designer & Web Developer', 'I am a passionate developer who loves creating elegant and functional web solutions.', '2003-09-02', 'Jakarta, Indonesia', 'azissetiawan0813@gmail.com', '081388401904', '2026-08-04 05:57:00', '2026-08-07 01:47:17');
 
 -- --------------------------------------------------------
 
@@ -86,6 +86,13 @@ CREATE TABLE `certificates` (
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data untuk tabel `certificates`
+--
+
+INSERT INTO `certificates` (`id`, `title`, `issuer`, `issue_date`, `credential_id`, `credential_url`, `image`, `sort_order`, `created_at`, `updated_at`) VALUES
+(1, 'SQL & Database Fundamentals', 'Dicoding', '', '', 'https://www.simplilearn.com/ice9/skillupcertificates/Introduction_to_SQL.png', '20260807-084106-4b80e0.png', 1, '2026-08-07 01:39:55', '2026-08-07 01:41:06');
+
 -- --------------------------------------------------------
 
 --
@@ -109,8 +116,8 @@ CREATE TABLE `education` (
 --
 
 INSERT INTO `education` (`id`, `institution`, `degree`, `start_year`, `end_year`, `description`, `sort_order`, `created_at`, `updated_at`) VALUES
-(1, 'Univ Indonesia', 'S1', '', '', 'dadasdasdasdasdasdas', 3, '2026-08-04 06:44:37', '2026-08-04 07:29:22'),
-(2, 'Univ Indonesia', 'S1', '2022-01', '2026-12', 'ASDASDASDAS', 2, '2026-08-04 06:44:52', '2026-08-04 07:29:19');
+(1, 'SMA N 43 Jakarta', 'None', '2018', '2021', 'Selama menempuh pendidikan di tingkat SMA, saya membangun dasar kemampuan berpikir kritis, kerja sama tim, dan pemecahan masalah. Pengalaman belajar ini menjadi fondasi untuk mengembangkan minat saya di bidang teknologi dan pengembangan perangkat lunak.', 1, '2026-08-04 06:44:37', '2026-08-07 01:29:48'),
+(3, 'Universitas Indraprasta PGRI', 'S1', '2021', '2025', 'Menempuh pendidikan di bidang [Nama Jurusan] dengan fokus pada pengembangan perangkat lunak, pemrograman, basis data, analisis sistem, dan teknologi web. Selama perkuliahan, saya mengerjakan berbagai proyek yang membantu meningkatkan kemampuan dalam membangun aplikasi menggunakan PHP, MySQL, JavaScript, dan Bootstrap, serta memahami praktik pengembangan perangkat lunak yang baik.', 2, '2026-08-06 07:18:24', '2026-08-07 01:30:22');
 
 -- --------------------------------------------------------
 
@@ -129,6 +136,13 @@ CREATE TABLE `experience` (
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data untuk tabel `experience`
+--
+
+INSERT INTO `experience` (`id`, `company`, `position`, `start_date`, `end_date`, `description`, `sort_order`, `created_at`, `updated_at`) VALUES
+(1, 'Freelance Web Developer', 'FullStack', '2025-01', '2026-08', 'Membuat website portfolio.\r\nMembangun sistem CRUD menggunakan PHP Native.\r\nMendesain UI responsive menggunakan Bootstrap.\r\nIntegrasi database MySQL.\r\nVersion control menggunakan Git & GitHub.', 1, '2026-08-06 08:07:33', '2026-08-06 08:07:33');
 
 -- --------------------------------------------------------
 
@@ -156,7 +170,7 @@ CREATE TABLE `hero` (
 --
 
 INSERT INTO `hero` (`id`, `greeting`, `title`, `profession`, `description`, `hero_image`, `button1_text`, `button1_link`, `button2_text`, `button2_link`, `created_at`, `updated_at`) VALUES
-(1, 'Hello, I am', 'Wahyu', 'Full-Stack Developer', 'Aku adalah tangan kanan pak bahlil', '20260804-134805-a2d934.jpg', 'Instagram', 'https://instagram.com/stywanjis', 'IG 2', 'https://instagram.com/stywanjis', '2026-08-04 05:57:00', '2026-08-04 06:48:05');
+(1, 'Hello, I am', 'Azis Setiawan', 'Full-Stack Developer', 'Saya adalah Web Developer yang berfokus pada pengembangan website modern, cepat, responsif, dan mudah dikelola menggunakan PHP, MySQL, Bootstrap, dan JavaScript.', '20260807-084655-c9206f.jpg', 'Instagram', 'https://instagram.com/stywanjis', 'Youtube', 'https://www.youtube.com/@stywanjis', '2026-08-04 05:57:00', '2026-08-07 01:46:55');
 
 -- --------------------------------------------------------
 
@@ -180,7 +194,8 @@ CREATE TABLE `messages` (
 
 INSERT INTO `messages` (`id`, `name`, `email`, `subject`, `message`, `is_read`, `created_at`) VALUES
 (1, 'Baskom', 'baskom@gmail.com', 'tes', 'ini meassage', 1, '2026-08-04 06:45:48'),
-(2, 'Baskom', 'baskom@gmail.com', 'tes2', 'ini message asdasdasads', 1, '2026-08-04 07:46:59');
+(2, 'Baskom', 'baskom@gmail.com', 'tes2', 'ini message asdasdasads', 1, '2026-08-04 07:46:59'),
+(3, 'belajar web', 'belajarwebuhuy@gmail.com', 'subject', 'messageeeee', 1, '2026-08-07 01:33:25');
 
 -- --------------------------------------------------------
 
@@ -203,6 +218,14 @@ CREATE TABLE `projects` (
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data untuk tabel `projects`
+--
+
+INSERT INTO `projects` (`id`, `title`, `slug`, `thumbnail`, `short_description`, `description`, `tech_stack`, `github_url`, `demo_url`, `featured`, `status`, `created_at`, `updated_at`) VALUES
+(1, 'Portfolio CMS', 'Portfolio CMS', '20260807-082638-c1b8db.png', 'Website CMS untuk mengelola seluruh isi portfolio tanpa perlu mengubah kode.', 'Portfolio CMS adalah aplikasi web yang dirancang untuk memudahkan pengguna dalam mengelola seluruh konten website portofolio melalui dashboard admin. Seluruh data seperti profil, pengalaman kerja, pendidikan, keterampilan, proyek, sertifikat, hingga artikel blog dapat ditambahkan, diperbarui, maupun dihapus tanpa perlu mengubah kode program secara langsung. Sistem ini mengutamakan kemudahan penggunaan, keamanan autentikasi, serta tampilan yang modern dan responsif sehingga dapat diakses dengan baik di berbagai perangkat.', 'PHP Native, MySQL, Bootstrap, JavaScript', 'https://github.com/belajarwebuhuy-coder/portofolio', 'https://github.com/belajarwebuhuy-coder/portofolio', 0, 'published', '2026-08-05 03:14:14', '2026-08-07 01:28:44'),
+(2, 'Inventory Management System', 'inventory-management-system', '20260807-082815-fd6427.png', 'Sistem manajemen inventaris berbasis web.', 'Inventory Management System merupakan aplikasi berbasis web yang membantu proses pencatatan dan pengelolaan data inventaris secara digital. Sistem ini memungkinkan administrator untuk mengelola data barang, kategori, pemasok, serta memantau stok secara lebih efisien. Dengan proses yang terkomputerisasi, risiko kesalahan pencatatan dapat dikurangi dan informasi inventaris dapat diakses dengan cepat melalui dashboard.', 'PHP, Native, MySQL, Bootstrap, JavaScript', 'https://inventrastock.vercel.app/', '', 1, 'published', '2026-08-07 01:28:09', '2026-08-07 01:37:43');
 
 -- --------------------------------------------------------
 
@@ -256,7 +279,7 @@ CREATE TABLE `settings` (
 --
 
 INSERT INTO `settings` (`id`, `website_name`, `logo`, `favicon`, `owner_name`, `owner_profession`, `owner_photo`, `email`, `phone`, `address`, `github`, `linkedin`, `instagram`, `facebook`, `x`, `youtube`, `meta_title`, `meta_description`, `google_verification`, `default_dark_mode`, `maintenance_mode`, `created_at`, `updated_at`) VALUES
-(1, 'Wahyu', '20260804-135128-fae23d.jpg', '20260804-135216-e5efb1.jpg', 'John Doe', 'Full-Stack Developer', '20260804-135128-214d28.jpg', 'hello@example.com', '+62 812 3456 7890', 'Jakarta, Indonesia', '', '', '', '', '', '', 'Wahyu Portfolio', 'A modern personal portfolio built with PHP Native and MySQL', '', 1, 1, '2026-08-04 05:57:00', '2026-08-04 06:53:07');
+(1, 'Azis Portofolio', '20260807-081305-7a4d7e.jpg', '20260807-081305-6c1b01.jpg', 'Muhamad Azis Setiawan', 'Full-Stack Developer', '20260807-081305-6d3b5f.jpg', 'azissetiawan0813@gmail.com', '081388401904', 'Jakarta, Indonesia', '', '', '', '', '', '', 'Azis Portfolio', 'A modern personal portfolio built with PHP Native and MySQL', '', 1, 1, '2026-08-04 05:57:00', '2026-08-07 01:31:37');
 
 -- --------------------------------------------------------
 
@@ -278,7 +301,11 @@ CREATE TABLE `skills` (
 --
 
 INSERT INTO `skills` (`id`, `name`, `percentage`, `sort_order`, `created_at`, `updated_at`) VALUES
-(1, 'HTML', 80, 20, '2026-08-04 06:42:50', '2026-08-04 06:43:00');
+(1, 'HTML', 80, 20, '2026-08-04 06:42:50', '2026-08-04 06:43:00'),
+(2, 'CSS', 80, 0, '2026-08-07 01:22:05', '2026-08-07 01:22:05'),
+(3, 'JavaScript', 60, 0, '2026-08-07 01:22:16', '2026-08-07 01:22:16'),
+(4, 'PHP Native', 70, 0, '2026-08-07 01:22:25', '2026-08-07 01:22:25'),
+(5, 'MySQL', 85, 0, '2026-08-07 01:22:35', '2026-08-07 01:22:35');
 
 -- --------------------------------------------------------
 
@@ -301,10 +328,10 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `photo`, `created_at`, `updated_at`) VALUES
-(1, 'Administrator', 'admin@example.com', '$2y$10$ua8i2Whz6cZJITjUfLra1.haMMkdNZNobFRN5oBXz0r0PTX011EUK', '20260804-134732-415a7a.jpg', '2026-08-04 05:57:00', '2026-08-04 06:47:32');
+(1, 'Administrator', 'admin@gmail.com', '$2y$10$ua8i2Whz6cZJITjUfLra1.haMMkdNZNobFRN5oBXz0r0PTX011EUK', '20260807-081944-d8ca8e.jpg', '2026-08-04 05:57:00', '2026-08-07 01:19:44');
 
 --
--- Indexes for dumped tables
+-- Indeks untuk tabel yang dibuang
 --
 
 --
@@ -407,19 +434,19 @@ ALTER TABLE `blogs`
 -- AUTO_INCREMENT untuk tabel `certificates`
 --
 ALTER TABLE `certificates`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT untuk tabel `education`
 --
 ALTER TABLE `education`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT untuk tabel `experience`
 --
 ALTER TABLE `experience`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT untuk tabel `hero`
@@ -431,19 +458,19 @@ ALTER TABLE `hero`
 -- AUTO_INCREMENT untuk tabel `messages`
 --
 ALTER TABLE `messages`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT untuk tabel `projects`
 --
 ALTER TABLE `projects`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT untuk tabel `project_images`
 --
 ALTER TABLE `project_images`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT untuk tabel `settings`
@@ -455,7 +482,7 @@ ALTER TABLE `settings`
 -- AUTO_INCREMENT untuk tabel `skills`
 --
 ALTER TABLE `skills`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT untuk tabel `users`
